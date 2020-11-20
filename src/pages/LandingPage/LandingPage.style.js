@@ -1,16 +1,21 @@
 import styled from 'styled-components';
+import { FONT_SIZE, SIZE } from '../../commonComponents/constants';
 
 const Title = styled.h1`
-  font-size: 2rem;
-`;
-
-const MainSubTitle = styled.p`
-  font-size: 1rem;
+  font-size: ${FONT_SIZE.TITLE};
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 0 ${SIZE.SMALL};
 `;
 
-export { Title, MainSubTitle, Container };
+const Signature = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+export { Title, Container, Signature };
