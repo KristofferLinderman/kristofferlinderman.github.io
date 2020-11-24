@@ -24,14 +24,15 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   height: 100%;
+`;
 
-  p {
+const NavItem = styled.span`
     color: ${THEME.MENU_TEXT};
     margin: auto;
-  }
 `;
 
 export {
   Container,
   Nav,
+  NavItem,
 };

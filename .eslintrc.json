@@ -19,6 +19,7 @@
     ],
     "rules": {
         "import/prefer-default-export": 0,
-        "react/prop-types": 2
+        "react/prop-types": 2,
+        "jsx-a11y/click-events-have-key-events":0
     }
 }
