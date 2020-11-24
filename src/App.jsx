@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   const landingRef = useRef();
@@ -19,6 +20,7 @@ function App() {
         contactPage: contactRef,
       }}
       />
+      <ScrollToTop topRef={landingRef} />
       <LandingPage ref={landingRef} />
       <Projects ref={projectRef} />
       <About ref={aboutRef} />

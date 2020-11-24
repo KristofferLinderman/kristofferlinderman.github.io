@@ -22,11 +22,9 @@ const Menu = ({ sections }) => {
   useScrollPosition(handlescroll);
 
   const handleClick = (section) => {
-    console.log('Click', section);
     section.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  console.log('Sections', sections);
   return (
     <Container menuState={menuState}>
       <Nav>
