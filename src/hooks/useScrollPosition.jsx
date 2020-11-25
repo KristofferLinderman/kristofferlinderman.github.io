@@ -21,7 +21,8 @@ function useScrollPosition(effect, deps, wait) {
 
   const callBack = () => {
     const currPos = getScrollPosition();
-    effect({ prevPos: position.current, currPos });
+    const direction = position.current.y - currPos.y;
+    effect({ prevPos: position.current, currPos, direction });
     position.current = currPos;
     throttleTimeout = null;
   };

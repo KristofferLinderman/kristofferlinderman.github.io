@@ -7,7 +7,7 @@ import { MENU_STATES } from './contants';
 
 const Menu = ({ sections }) => {
   const [menuState, setMenuState] = useState(MENU_STATES.TOP);
-  const handlescroll = ({ currPos }) => {
+  const handleScroll = ({ currPos }) => {
     if (currPos.y > window.innerHeight - SIZE.MENU) {
       if (menuState !== MENU_STATES.STICKY) {
         setMenuState(MENU_STATES.STICKY);
@@ -19,7 +19,7 @@ const Menu = ({ sections }) => {
     }
   };
 
-  useScrollPosition(handlescroll);
+  useScrollPosition(handleScroll);
 
   const handleClick = (section) => {
     section.current.scrollIntoView({ behavior: 'smooth' });
