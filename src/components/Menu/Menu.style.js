@@ -29,6 +29,20 @@ const Nav = styled.nav`
 const NavItem = styled.span`
     color: ${THEME.MENU_TEXT};
     margin: auto;
+    width: fit-content;
+    position: relative;
+
+    &::after{
+      position: absolute;
+      content: '';
+      height: 2px;
+      bottom: -4px;
+      right: 0; 
+      left: -10%;
+      width: ${(props) => (props.isCurrent ? '120%' : '0')};
+      background-color: white;
+      transition: width 0.5s ease-in-out;
+  }
 `;
 
 export {

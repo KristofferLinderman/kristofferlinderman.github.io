@@ -7,6 +7,20 @@ import { MENU_STATES } from './contants';
 
 const Menu = ({ sections }) => {
   const [menuState, setMenuState] = useState(MENU_STATES.TOP);
+  const [currentSection, setCurrentSection] = useState(0);
+
+  // Could have a state for transition, if it is transitioning then no isCurrent
+  const isCurrent = (index) => index === currentSection;
+
+  const getCurrentSection = (yPos) => {
+    const screenHeight = window.innerHeight;
+    const currSection = yPos > (screenHeight - SIZE.MENU)
+      ? Math.floor(yPos / (screenHeight - SIZE.MENU))
+      : 0;
+
+    setCurrentSection(currSection);
+  };
+
   const handleScroll = ({ currPos }) => {
     if (currPos.y > window.innerHeight - SIZE.MENU) {
       if (menuState !== MENU_STATES.STICKY) {
@@ -17,6 +31,8 @@ const Menu = ({ sections }) => {
     } else if (menuState !== MENU_STATES.TRANSITION) {
       setMenuState(MENU_STATES.TRANSITION);
     }
+
+    getCurrentSection(currPos.y);
   };
 
   useScrollPosition(handleScroll);
@@ -28,9 +44,9 @@ const Menu = ({ sections }) => {
   return (
     <Container menuState={menuState}>
       <Nav>
-        <NavItem role="menuitem" tabIndex="0" onClick={() => handleClick(sections.projectPage)}>Projects</NavItem>
-        <NavItem role="menuitem" tabIndex="0" onClick={() => handleClick(sections.aboutPage)}>About</NavItem>
-        <NavItem role="menuitem" tabIndex="0" onClick={() => handleClick(sections.contactPage)}>Contact</NavItem>
+        <NavItem role="menuitem" isCurrent={isCurrent(1)} tabIndex="0" onClick={() => handleClick(sections.projectPage)}>Projects</NavItem>
+        <NavItem role="menuitem" isCurrent={isCurrent(2)} tabIndex="0" onClick={() => handleClick(sections.aboutPage)}>About</NavItem>
+        <NavItem role="menuitem" isCurrent={isCurrent(3)} tabIndex="0" onClick={() => handleClick(sections.contactPage)}>Contact</NavItem>
       </Nav>
     </Container>
   );
