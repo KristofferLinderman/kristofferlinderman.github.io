@@ -51,7 +51,7 @@ const ScrollToTop = ({ topRef }) => {
 };
 
 ScrollToTop.propTypes = {
-  topRef: PropTypes.shape.isRequired,
+  topRef: PropTypes.shape({ current: React.MutableRefObject }).isRequired,
 };
 
 export default ScrollToTop;

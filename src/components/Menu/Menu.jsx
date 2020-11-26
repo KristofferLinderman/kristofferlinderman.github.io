@@ -37,7 +37,11 @@ const Menu = ({ sections }) => {
 };
 
 Menu.propTypes = {
-  sections: PropTypes.shape.isRequired,
+  sections: PropTypes.shape({
+    projectPage: PropTypes.shape({ current: React.MutableRefObject }),
+    aboutPage: PropTypes.shape({ current: React.MutableRefObject }),
+    contactPage: PropTypes.shape({ current: React.MutableRefObject }),
+  }).isRequired,
 };
 
 export default Menu;
