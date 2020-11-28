@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const ImageIcon = styled(UpIcon)`
   margin: auto;
-  fill: '#111';
+  fill: #f6f6f6;
 `;
 
 const UndoScrollBtn = styled.button`
@@ -42,8 +42,8 @@ const UndoScrollBtn = styled.button`
 
   > span {
     background: ${THEME.GRADIENT_TEXT};
-    background-clip: text;
-    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 

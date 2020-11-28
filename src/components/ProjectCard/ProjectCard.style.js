@@ -3,11 +3,11 @@ import { THEME, FONT_SIZE, SIZE } from '../../commonComponents/constants';
 import { Text } from '../../commonComponents/common.style';
 
 const Card = styled.div`
-  display: flex;
+  display: inline-block;
   box-shadow: ${THEME.BOX_SHADOW};
-  width: 90%;
+  min-width: 90%;
   height: 60%;
-  margin: auto;
+  margin: auto ${SIZE.LARGE};
   position: relative;
   overflow:hidden;
 `;
