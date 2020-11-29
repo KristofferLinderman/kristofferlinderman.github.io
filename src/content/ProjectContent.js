@@ -27,7 +27,7 @@ const ProjectData = [
     img: landingPageImg,
     github: 'string',
     url: 'string',
-    show: true,
+    show: false,
   },
   {
     id: 2,

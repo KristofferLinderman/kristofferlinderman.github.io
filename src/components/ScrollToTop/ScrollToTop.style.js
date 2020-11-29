@@ -3,6 +3,7 @@ import { THEME, SIZE } from '../../commonComponents/constants';
 import { ReactComponent as UpIcon } from '../../assets/icons/up-arrow.svg';
 
 const Container = styled.div`
+  z-index: 999;
   position: fixed;
   display: flex;
   width: 50px;

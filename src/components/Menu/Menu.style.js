@@ -32,6 +32,7 @@ const NavItem = styled.span`
     margin: auto;
     width: fit-content;
     position: relative;
+    outline: none;
 
     &::after{
       position: absolute;

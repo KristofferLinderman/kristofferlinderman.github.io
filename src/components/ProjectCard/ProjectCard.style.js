@@ -7,7 +7,7 @@ const Card = styled.div`
   box-shadow: ${THEME.BOX_SHADOW};
   min-width: 90%;
   height: 60%;
-  margin: auto ${SIZE.LARGE};
+  margin: auto ${SIZE.SMALL};
   position: relative;
   overflow:hidden;
 `;
