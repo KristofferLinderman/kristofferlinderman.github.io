@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
-import { Container, T } from './Contact.style';
+import ContactText from '../../content/ContactContent';
+import ContactImg from '../../assets/images/contact.jpg';
+import ImageWithOverlay from '../../commonComponents/ImageWithOverlay/ImageWithOverlay';
+import { Container } from './Contact.style';
 
 const Contact = forwardRef((_, ref) => (
   <Container ref={ref}>
-    <T>
-      Contact
-    </T>
+    <ImageWithOverlay text={ContactText} image={ContactImg} />
   </Container>
 ));
 

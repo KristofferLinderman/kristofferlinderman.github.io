@@ -28,13 +28,4 @@ const TextWrapper = styled.div`
   height: 100%;
 `;
 
-const Image = styled.img`
-  width: 100%;
-`;
-
-export {
-  Container,
-  TextContainer,
-  Image,
-  TextWrapper,
-};
+export { Container, TextContainer, TextWrapper };
