@@ -11,10 +11,17 @@ const ScrollToTop = ({ topRef }) => {
   const handleScroll = ({ currPos, direction }) => {
     // console.log(` ${prevPos.y}  ${currPos.y} direction: ${direction > 0 ? 'UP' : 'DOWN'}`);
 
+    const showScrollBtnWithTimout = () => {
+      setShowScrollBtn(true);
+      setTimeout(() => {
+        setShowScrollBtn(false);
+      }, 2500);
+    };
+
     if (direction > 0 && showScrollBtn) {
       setShowScrollBtn(false);
     } else if (direction < 0 && !showScrollBtn && currPos.y > window.innerHeight - 50) {
-      setShowScrollBtn(true);
+      showScrollBtnWithTimout();
     }
   };
 
