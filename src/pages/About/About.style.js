@@ -1,18 +1,40 @@
 import styled from 'styled-components';
-// import { THEME } from '../../commonComponents/constants';
+import { THEME, SIZE } from '../../commonComponents/constants';
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
 `;
 
-const T = styled.p`
+const TextContainer = styled.div`
   margin:auto;
+  position: absolute;
+  top: 50%;
+  background-color: ${THEME.PRIMARY_LIGHT};
+  border-radius: ${THEME.BORDER_RADIUS};
+  box-shadow: ${THEME.BOX_SHADOW};
+  line-height: ${SIZE.LARGE};
+  padding: ${SIZE.MEDIUM} ${SIZE.SMALL};
+  height: 40%;
+  overflow: scroll;
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  overflow: scroll;
+  height: 100%;
+`;
+
+const Image = styled.img`
+  width: 100%;
 `;
 
 export {
   Container,
-  T,
+  TextContainer,
+  Image,
+  TextWrapper,
 };
