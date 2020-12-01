@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SIZE } from '../../commonComponents/constants';
 // import { THEME } from '../../commonComponents/constants';
 
 const Container = styled.div`
@@ -8,11 +9,20 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 
-const T = styled.p`
-  margin:auto;
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin: ${SIZE.LARGE};
+`;
+
+const Link = styled.a`
+  display: flex;
+`;
+
+const LinkImg = styled.img`
+  width: ${SIZE.XLARGE};
 `;
 
 export {
-  Container,
-  T,
+  Container, LinkContainer, Link, LinkImg,
 };
