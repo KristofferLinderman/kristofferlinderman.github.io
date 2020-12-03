@@ -9,11 +9,4 @@ const Container = styled.div`
   overflow: scroll;
 `;
 
-const T = styled.p`
-  margin:auto;
-`;
-
-export {
-  Container,
-  T,
-};
+export { Container };
