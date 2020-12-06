@@ -20,7 +20,10 @@ const THEME = {
   BOX_SHADOW: '0px 4px 10px rgba(0, 0, 0, 0.25)',
   TOP_BOX_SHADOW: '0px -4px 10px rgba(0, 0, 0, 0.25)',
   BORDER_RADIUS: '20px',
+  BORDER_RADIUS_SMALL: '5px',
   PRIMARY_LIGHT: '#f6f6f6',
+  HIGH_LEVEL: 1337,
+  HIGHEST_LEVEL: 1338,
 };
 
 export {

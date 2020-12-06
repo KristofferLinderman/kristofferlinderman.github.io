@@ -14,4 +14,10 @@ const OverlayContainer = styled.div`
   overflow: scroll;
 `;
 
-export { OverlayContainer };
+const Image = styled.img`
+  width: ${(p) => (p.fitToHeight ? 'auto' : '100%')};
+  height: ${(p) => (p.fitToHeight ? '60%' : '100%')};
+  object-fit: ${(p) => (p.fitToHeight ? 'cover' : 'initial')};
+`;
+
+export { OverlayContainer, Image };

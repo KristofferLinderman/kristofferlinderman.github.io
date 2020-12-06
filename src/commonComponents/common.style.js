@@ -13,10 +13,6 @@ const Container = styled.div`
   position: relative;
 `;
 
-const Image = styled.img`
-  width: 100%;
-`;
-
 export {
-  Text, Container, Image,
+  Text, Container,
 };

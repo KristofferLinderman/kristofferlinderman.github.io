@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Container } from '../common.style';
+import { OverlayContainer, Image } from './ImageWithOverlay.style';
 
-import { Container, Image } from '../common.style';
-import { OverlayContainer } from './ImageWithOverlay.style';
-
-const ImageWithOverlay = ({ image, children }) => (
+const ImageWithOverlay = ({ image, children, fitToHeight }) => (
   <Container>
-    <Image src={image} alt="" srcSet="" />
+    <Image src={image} alt="" srcSet="" fitToHeight={fitToHeight} />
     <OverlayContainer>
       {children}
     </OverlayContainer>
@@ -16,6 +15,11 @@ const ImageWithOverlay = ({ image, children }) => (
 ImageWithOverlay.propTypes = {
   children: PropTypes.node.isRequired,
   image: PropTypes.string.isRequired,
+  fitToHeight: PropTypes.bool,
+};
+
+ImageWithOverlay.defaultProps = {
+  fitToHeight: false,
 };
 
 export default ImageWithOverlay;

@@ -1,31 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Card, Image, InfoContainer, Tags, Title,
 } from './ProjectCard.style';
 
-const ProjectCard = ({ projectData }) => {
-  const [isDetailView, setIsDetailView] = useState(false);
-
-  const handleClick = () => {
-    setIsDetailView(!isDetailView);
-  };
-
-  return (
-    <Card onClick={() => handleClick()} isDetailView={isDetailView}>
-      <Image src={projectData.img} />
-      <InfoContainer>
-        <Title>
-          {projectData.name}
-        </Title>
-        <Tags>
-          {projectData.tags}
-        </Tags>
-      </InfoContainer>
-    </Card>
-  );
-};
-
+const ProjectCard = ({ projectData, handleOnClick }) => (
+  <Card onClick={() => handleOnClick(projectData)}>
+    <Image src={projectData.img} />
+    <InfoContainer>
+      <Title>
+        {projectData.name}
+      </Title>
+      <Tags>
+        {projectData.tags}
+      </Tags>
+    </InfoContainer>
+  </Card>
+);
 ProjectCard.propTypes = {
   projectData: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -42,6 +33,7 @@ ProjectCard.propTypes = {
     ]),
     show: PropTypes.bool.isRequired,
   }).isRequired,
+  handleOnClick: PropTypes.func.isRequired,
 };
 
 export default ProjectCard;

@@ -5,20 +5,13 @@ import { Text } from '../../commonComponents/common.style';
 const Card = styled.div`
   display: inline-block;
   box-shadow: ${THEME.BOX_SHADOW};
-  min-width: ${(props) => (props.isDetailView ? '100vw' : '90%')};
-  height: ${(props) => (props.isDetailView ? '100vh' : '60%')};
-  margin: ${(props) => (props.isDetailView ? 'auto 0' : `auto ${SIZE.SMALL}`)};
-  z-index: ${(props) => (props.isDetailView ? '999' : '0')};
-  position: ${(props) => (props.isDetailView ? 'fixed' : 'relative')};
-  bottom: ${(props) => (props.isDetailView ? '0' : '')};
+  margin: auto ${SIZE.SMALL};
+  min-width: 90%;
+  height: 60%;
+  position: relative;
   overflow:hidden;
   transition: all 0.5s ease-in-out;
 `;
-
-// height: 100vh;
-//     width: 100vw;
-//     margin: 0;
-//     z-index: 999;
 
 const Image = styled.img`
   height: 100%;

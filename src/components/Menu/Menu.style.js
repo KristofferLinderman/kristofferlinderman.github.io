@@ -9,7 +9,7 @@ const transitionBorderRadius = `${THEME.BORDER_RADIUS} ${THEME.BORDER_RADIUS} ${
 const borderRadius = `${THEME.BORDER_RADIUS} ${THEME.BORDER_RADIUS} 0 0`;
 
 const Container = styled.div`
-  z-index: 999;
+  z-index: ${THEME.HIGH_LEVEL};
   position: ${(props) => (props.menuState === MENU_STATES.STICKY ? 'fixed' : 'absolute')};
   top:${(props) => (props.menuState === MENU_STATES.STICKY ? '0' : 'auto')};
   bottom: 0;
