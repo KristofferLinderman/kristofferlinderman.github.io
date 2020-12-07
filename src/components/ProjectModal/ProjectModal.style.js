@@ -13,17 +13,23 @@ const Overlay = styled(motion.div)`
 `;
 const Modal = styled(motion.div)`
   position: absolute;
-  width: 90%;
-  height: 90%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  /* top: 2.5%;
+  left: 2.5%; */
+  /* transform: translate(-50%, -50%); */
   border-radius: ${THEME.BORDER_RADIUS_SMALL};
 `;
 
 const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+const BottomContainer = styled.div`
+  display: flex;
+  height: ${SIZE.LINE_HEIGHT * 6};
+  overflow: scroll;
 `;
 
 const TitleContainer = styled.div`
@@ -46,5 +52,12 @@ const LinkImg = styled.img`
 `;
 
 export {
-  Modal, Overlay, TopContainer, TitleContainer, LinkContainer, Link, LinkImg,
+  Modal,
+  Overlay,
+  TopContainer,
+  BottomContainer,
+  TitleContainer,
+  LinkContainer,
+  Link,
+  LinkImg,
 };

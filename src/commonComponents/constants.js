@@ -11,6 +11,7 @@ const SIZE = {
   LARGE: '2rem',
   XLARGE: '2.5rem',
   MENU: 50,
+  LINE_HEIGHT: 1.5,
 };
 
 const THEME = {

@@ -1,6 +1,6 @@
-import landingPageImg from '../assets/images/landing-page.jpg';
+import LandingPageImg from '../assets/images/landing-page.jpg';
 import ProfilePageImg from '../assets/images/profile-page.png';
-import todoListImg from '../assets/images/todo-list.png';
+import TodoListImg from '../assets/images/todo-list.png';
 
 /**
  * @typedef  {name: string,
@@ -24,7 +24,7 @@ const ProjectData = [
     name: 'ToDo List',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
     tags: 'React.js, Redux, localStorage',
-    img: landingPageImg,
+    img: LandingPageImg,
     github: 'string',
     url: 'string',
     show: false,
@@ -37,17 +37,17 @@ const ProjectData = [
     img: ProfilePageImg,
     github: 'string',
     url: 'string',
-    show: true,
+    show: false,
   },
   {
     id: 3,
     name: 'Landing Page',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam.',
-    tags: 'React.js, Redux, localStorage',
-    img: todoListImg,
+    description: 'A simple todo app using React. Add/remove and saved in local storage. Offline support',
+    tags: 'React.js, Redux',
+    img: TodoListImg,
     github: 'string',
     url: 'string',
-    show: false,
+    show: true,
   },
 ];
 

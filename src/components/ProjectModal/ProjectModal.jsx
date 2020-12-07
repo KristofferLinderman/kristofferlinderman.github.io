@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { AnimatePresence } from 'framer-motion';
 import {
-  Overlay, Modal, TopContainer, TitleContainer, LinkContainer, Link, LinkImg,
+  Overlay, Modal, TopContainer, TitleContainer, LinkContainer, Link, LinkImg, BottomContainer,
 } from './ProjectModal.style';
 import ImageWithOverlay from '../../commonComponents/ImageWithOverlay/ImageWithOverlay';
 import GithubIcon from '../../assets/icons/github.svg';
@@ -14,9 +14,9 @@ const overlayVariants = {
 };
 
 const modalVariant = {
-  initial: { top: '-50%', transition: { type: 'spring' } },
-  isOpen: { top: '50%' },
-  exit: { top: '-50%' },
+  initial: { x: '100%', transition: { type: 'spring' } },
+  isOpen: { x: 0 },
+  exit: { x: '100%' },
 };
 
 const ProjectModal = ({ project, handleOnClick, isOpen }) => (
@@ -38,7 +38,9 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => (
           <TopContainer>
             <TitleContainer>
               <h1>{project.name}</h1>
-              <p>{project.tags}</p>
+              <p>
+                {project.tags}
+              </p>
             </TitleContainer>
             <LinkContainer>
               <Link href={project.github}>
@@ -49,7 +51,13 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => (
               </Link>
             </LinkContainer>
           </TopContainer>
-          <p>{project.description}</p>
+          <BottomContainer>
+            <p>
+              {project.description}
+              {' '}
+              {project.description}
+            </p>
+          </BottomContainer>
         </ImageWithOverlay>
       </Modal>
     </Overlay>
