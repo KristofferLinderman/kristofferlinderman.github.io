@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { THEME, SIZE } from '../../commonComponents/constants';
-import { ReactComponent as UpIcon } from '../../assets/icons/up-arrow.svg';
+import { ReactComponent as UpIcon } from '../../assets/icons/arrow.svg';
 
 const Container = styled.div`
   z-index: ${THEME.HIGH_LEVEL};
@@ -19,6 +19,7 @@ const Container = styled.div`
 `;
 
 const ImageIcon = styled(UpIcon)`
+  transform: rotate(90deg);
   margin: auto;
   fill: #f6f6f6;
 `;

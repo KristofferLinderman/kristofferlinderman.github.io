@@ -31,15 +31,6 @@ const InfoContainer = styled.div`
   padding: ${SIZE.SMALL} ${SIZE.XLARGE};
 `;
 
-const Title = styled.h2`
-  font-size: ${FONT_SIZE.PROJECT_TITLE};
-  color: #8813B2;
-`;
-
-const Tags = styled(Text)`
-  color: #8813B2;
-`;
-
 export {
-  Card, Image, InfoContainer, Title, Tags,
+  Card, Image, InfoContainer,
 };

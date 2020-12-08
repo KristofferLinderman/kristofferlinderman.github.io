@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Card, Image, InfoContainer, Tags, Title,
+  Card, Image, InfoContainer,
 } from './ProjectCard.style';
+import { ProjectTag, ProjectTitle } from '../../commonComponents/common.style';
 
 const ProjectCard = ({ projectData, handleOnClick }) => (
   <Card onClick={() => handleOnClick(projectData)}>
     <Image src={projectData.img} />
     <InfoContainer>
-      <Title>
+      <ProjectTitle>
         {projectData.name}
-      </Title>
-      <Tags>
+      </ProjectTitle>
+      <ProjectTag>
         {projectData.tags}
-      </Tags>
+      </ProjectTag>
     </InfoContainer>
   </Card>
 );

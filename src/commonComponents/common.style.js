@@ -5,6 +5,15 @@ const Text = styled.p`
   font-size: ${FONT_SIZE.TEXT};
 `;
 
+const ProjectTitle = styled.h2`
+  font-size: ${FONT_SIZE.PROJECT_TITLE};
+  color: #8813B2;
+`;
+
+const ProjectTag = styled(Text)`
+  color: #8813B2;
+`;
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -14,5 +23,5 @@ const Container = styled.div`
 `;
 
 export {
-  Text, Container,
+  Text, Container, ProjectTitle, ProjectTag,
 };

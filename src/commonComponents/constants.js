@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 const FONT_SIZE = {
   TEXT: '1rem',
   TITLE: '1.5rem',
