@@ -15,7 +15,7 @@ import {
 import ImageWithOverlay from '../../commonComponents/ImageWithOverlay/ImageWithOverlay';
 import GithubIcon from '../../assets/icons/github.svg';
 import { ProjectTag, ProjectTitle } from '../../commonComponents/common.style';
-import BackBtn from '../BackBtn/BackBtn';
+import CloseBtn from '../CloseBtn/CloseBtn';
 
 const overlayVariants = {
   initial: { opacity: 0 },
@@ -54,7 +54,10 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => {
           variants={modalVariant}
           onClick={(event) => onModalClick(event)}
         >
-          <ImageWithOverlay image={project.img} fitToHeight>
+          <ImageWithOverlay
+            image={project.img}
+            fitToHeight
+          >
             <Container>
               <TopContainer>
                 <TitleContainer>
@@ -83,7 +86,7 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => {
                   {project.description}
                 </p>
               </BottomContainer>
-              <BackBtn onClick={() => closeModal()} />
+              <CloseBtn handleClick={closeModal} />
             </Container>
           </ImageWithOverlay>
         </Modal>

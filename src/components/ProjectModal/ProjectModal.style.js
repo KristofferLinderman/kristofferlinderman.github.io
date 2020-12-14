@@ -11,10 +11,11 @@ const Overlay = styled(motion.div)`
   left: 0;
   background-color: rgba(0,0,0,0.5);
 `;
+
 const Modal = styled(motion.div)`
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: ${THEME.BORDER_RADIUS_SMALL};
 `;
 

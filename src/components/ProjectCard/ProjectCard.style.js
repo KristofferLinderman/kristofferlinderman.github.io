@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { THEME, FONT_SIZE, SIZE } from '../../commonComponents/constants';
-import { Text } from '../../commonComponents/common.style';
+import { THEME, SIZE } from '../../commonComponents/constants';
 
 const Card = styled.div`
   display: inline-block;
