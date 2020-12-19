@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-import { THEME, SIZE } from '../../commonComponents/constants';
+import { THEME, SIZE, DEVICE } from '../../commonComponents/constants';
 import { MENU_STATES } from './contants';
 
 const stickyBorderRadius = `0 0 ${THEME.BORDER_RADIUS} ${THEME.BORDER_RADIUS}`;
@@ -19,12 +19,26 @@ const Container = styled.div`
   background: ${THEME.GRADIENT};
   box-shadow: ${THEME.BOX_SHADOW};
   transition: border-radius 0.5s ease-in-out;
+
+  @media ${DEVICE.desktop} {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    bottom: 50%;
+    height: 20%;
+    width: 200px;
+    border-radius: 20px 0 0 20px;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   height: 100%;
+
+  @media ${DEVICE.desktop}{
+    flex-direction: column;
+  }
 `;
 
 const NavItem = styled.span`
@@ -33,6 +47,7 @@ const NavItem = styled.span`
     width: fit-content;
     position: relative;
     outline: none;
+    cursor: pointer;
 
     &::after{
       position: absolute;

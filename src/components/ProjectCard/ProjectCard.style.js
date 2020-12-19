@@ -1,15 +1,21 @@
 import styled from 'styled-components';
-import { THEME, SIZE } from '../../commonComponents/constants';
+import { THEME, SIZE, DEVICE } from '../../commonComponents/constants';
 
 const Card = styled.div`
   display: inline-block;
   box-shadow: ${THEME.BOX_SHADOW};
-  margin: auto ${SIZE.SMALL};
+  margin:  ${SIZE.SMALL};
   min-width: 90%;
-  height: 60%;
+  min-height: 60vh;
   position: relative;
   overflow:hidden;
+  scroll-snap-align: center;
   transition: all 0.5s ease-in-out;
+
+  @media ${DEVICE.desktop}{
+    min-width: initial;
+    width: 25%;
+  }
 `;
 
 const Image = styled.img`

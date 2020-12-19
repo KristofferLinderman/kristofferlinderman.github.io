@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import { Container } from './Projects.style';
+import { Container, ScrollContainer } from './Projects.style';
 import ProjectCard from '../../components/ProjectCard';
 import ProjectContent from '../../content/ProjectContent';
 import ProjectModal from '../../components/ProjectModal/ProjectModal';
@@ -17,13 +17,15 @@ const Projects = forwardRef((_, ref) => {
   return (
     <>
       <Container ref={ref}>
-        {filteredProjects.map((project) => (
-          <ProjectCard
-            projectData={project}
-            key={project.id}
-            handleOnClick={handleClick}
-          />
-        ))}
+        <ScrollContainer>
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              projectData={project}
+              key={project.id}
+              handleOnClick={handleClick}
+            />
+          ))}
+        </ScrollContainer>
       </Container>
       <ProjectModal
         project={currentProject}
