@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { THEME, SIZE } from '../../commonComponents/constants';
+import { THEME, SIZE, DEVICE } from '../../commonComponents/constants';
 
 const Overlay = styled(motion.div)`
   position: fixed;
@@ -17,6 +17,14 @@ const Modal = styled(motion.div)`
   width: 100%;
   height: 100%;
   border-radius: ${THEME.BORDER_RADIUS_SMALL};
+
+  @media ${DEVICE.LAPTOP}{
+    width: 60%;
+    height: 80vh;
+    left: 50%;
+    margin-left: -30%;
+    margin-top: -40vh;
+  }
 `;
 
 const Container = styled.div`
@@ -45,7 +53,14 @@ const TitleContainer = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   width: 40%;
-  justify-content: space-between;
+
+  @media ${DEVICE.LAPTOP}{
+    justify-content: flex-end;
+
+    & > a {
+      margin: 0 ${SIZE.SMALL};
+    }
+  }
 `;
 
 const Link = styled.a`

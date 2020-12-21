@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Nav, NavItem } from './Menu.style';
-import useScrollPosition from '../../hooks/useScrollPosition';
+import useScrollPosition from '../../utils/useScrollPosition';
 import { SIZE } from '../../commonComponents/constants';
 import { MENU_STATES } from './contants';
 

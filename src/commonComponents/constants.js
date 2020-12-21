@@ -26,25 +26,24 @@ const THEME = {
   HIGHEST_LEVEL: 1338,
 };
 
-const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '1920px',
+const DEVICE_SIZE = {
+  MOBILE_S: 320,
+  MOBILE_M: 375,
+  MOBILE_L: 425,
+  TABLET: 768,
+  LAPTOP: 1024,
+  LAPTOP_L: 1440,
+  DESKTOP: 1920,
 };
 
 const DEVICE = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`,
+  MOBILE_S: `(min-width: ${DEVICE_SIZE.MOBILE_S}px)`,
+  MOBILE_M: `(min-width: ${DEVICE_SIZE.MOBILE_M}px)`,
+  MOBILE_L: `(min-width: ${DEVICE_SIZE.MOBILE_L}px)`,
+  TABLET: `(min-width: ${DEVICE_SIZE.TABLET}px)`,
+  LAPTOP: `(min-width: ${DEVICE_SIZE.LAPTOP}px)`,
+  LAPTOP_L: `(min-width: ${DEVICE_SIZE.LAPTOP_L}px)`,
+  DESKTOP: `(min-width: ${DEVICE_SIZE.DESKTOP}px)`,
 };
 
 export {
@@ -52,4 +51,5 @@ export {
   SIZE,
   THEME,
   DEVICE,
+  DEVICE_SIZE,
 };

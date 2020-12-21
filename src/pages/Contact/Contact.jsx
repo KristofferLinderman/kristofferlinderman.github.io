@@ -12,7 +12,7 @@ import LinkedinIcon from '../../assets/icons/linkedin.svg';
 
 const Contact = forwardRef((_, ref) => (
   <Container ref={ref}>
-    <ImageWithOverlay image={ContactImg}>
+    <ImageWithOverlay image={ContactImg} rightSide>
       <Text>
         {ContactText}
       </Text>

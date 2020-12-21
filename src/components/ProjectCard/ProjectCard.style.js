@@ -11,8 +11,9 @@ const Card = styled.div`
   overflow:hidden;
   scroll-snap-align: center;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 
-  @media ${DEVICE.desktop}{
+  @media ${DEVICE.LAPTOP}{
     min-width: initial;
     width: 25%;
   }

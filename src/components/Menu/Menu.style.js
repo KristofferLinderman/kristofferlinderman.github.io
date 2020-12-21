@@ -20,7 +20,7 @@ const Container = styled.div`
   box-shadow: ${THEME.BOX_SHADOW};
   transition: border-radius 0.5s ease-in-out;
 
-  @media ${DEVICE.desktop} {
+  @media ${DEVICE.LAPTOP} {
     position: fixed;
     right: 0;
     top: 40%;
@@ -36,7 +36,7 @@ const Nav = styled.nav`
   justify-content: space-evenly;
   height: 100%;
 
-  @media ${DEVICE.desktop}{
+  @media ${DEVICE.LAPTOP}{
     flex-direction: column;
   }
 `;

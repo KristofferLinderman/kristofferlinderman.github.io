@@ -6,7 +6,7 @@ import { Container, TextWrapper } from './About.style';
 
 const About = forwardRef((_, ref) => (
   <Container ref={ref}>
-    <ImageWithOverlay image={AboutImg}>
+    <ImageWithOverlay image={AboutImg} leftSide>
       <TextWrapper>
         <p>{AboutText}</p>
       </TextWrapper>

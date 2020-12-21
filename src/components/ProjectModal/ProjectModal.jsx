@@ -16,6 +16,8 @@ import ImageWithOverlay from '../../commonComponents/ImageWithOverlay/ImageWithO
 import GithubIcon from '../../assets/icons/github.svg';
 import { ProjectTag, ProjectTitle } from '../../commonComponents/common.style';
 import CloseBtn from '../CloseBtn/CloseBtn';
+import isDevice from '../../utils/isDevice';
+import { DEVICE_SIZE } from '../../commonComponents/constants';
 
 const overlayVariants = {
   initial: { opacity: 0 },
@@ -25,7 +27,7 @@ const overlayVariants = {
 
 const modalVariant = {
   initial: { top: '100%', transition: { type: 'spring' } },
-  isOpen: { top: 0 },
+  isOpen: { top: isDevice([DEVICE_SIZE.LAPTOP]) ? '50%' : 0 },
   exit: { top: '100%' },
 };
 
@@ -86,9 +88,9 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => {
                   {project.description}
                 </p>
               </BottomContainer>
-              <CloseBtn handleClick={closeModal} />
             </Container>
           </ImageWithOverlay>
+          <CloseBtn handleClick={closeModal} />
         </Modal>
       </Overlay>
       )}

@@ -4,7 +4,7 @@ import { SIZE, THEME } from '../../commonComponents/constants';
 
 const Container = styled.div`
   z-index: ${THEME.HIGHEST_LEVEL};
-  position: fixed;
+  position: absolute;
   display: flex;
   width: 50px;
   height: 50px;
@@ -13,6 +13,7 @@ const Container = styled.div`
   background: ${THEME.GRADIENT};
   border-radius: 50%;
   box-shadow: ${THEME.BOX_SHADOW};
+  cursor: pointer;
 `;
 
 const ImageIcon = styled(UpIcon)`

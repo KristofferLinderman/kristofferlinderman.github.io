@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container, ImageIcon, UndoScrollBtn } from './ScrollToTop.style';
-import useScrollPosition from '../../hooks/useScrollPosition';
+import useScrollPosition from '../../utils/useScrollPosition';
 
 const ScrollToTop = ({ topRef }) => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);

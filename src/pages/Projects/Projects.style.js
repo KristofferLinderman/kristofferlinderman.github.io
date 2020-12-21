@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SIZE, THEME } from '../../commonComponents/constants';
+import { SIZE, THEME, DEVICE } from '../../commonComponents/constants';
 
 const Container = styled.div`
   width: 100%;
@@ -13,6 +13,10 @@ const ScrollContainer = styled.div`
   width: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+
+  @media ${DEVICE.LAPTOP}{
+    justify-content: space-evenly;
+  }
 
   &::before{
     content: '';
