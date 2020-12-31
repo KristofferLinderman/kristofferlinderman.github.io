@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { THEME, SIZE, DEVICE } from '../../commonComponents/constants';
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   display: inline-block;
   box-shadow: ${THEME.BOX_SHADOW};
   margin:  ${SIZE.SMALL};
@@ -19,7 +20,7 @@ const Card = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   height: 100%;
   object-fit: cover;
   width: 100%;

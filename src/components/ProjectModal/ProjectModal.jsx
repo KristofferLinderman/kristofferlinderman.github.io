@@ -8,15 +8,15 @@ import {
   TopContainer,
   TitleContainer,
   LinkContainer,
-  Link,
-  LinkImg,
   BottomContainer,
 } from './ProjectModal.style';
 import ImageWithOverlay from '../../commonComponents/ImageWithOverlay/ImageWithOverlay';
 import GithubIcon from '../../assets/icons/github.svg';
-import { ProjectTag, ProjectTitle } from '../../commonComponents/common.style';
+import {
+  Link, LinkImg, ProjectTag, ProjectTitle,
+} from '../../commonComponents/common.style';
 import CloseBtn from '../CloseBtn/CloseBtn';
-import isDevice from '../../utils/isDevice';
+import isDevice, { getBrowserIcon } from '../../utils/DeviceManager';
 import { DEVICE_SIZE } from '../../commonComponents/constants';
 
 const overlayVariants = {
@@ -70,10 +70,10 @@ const ProjectModal = ({ project, handleOnClick, isOpen }) => {
                 </TitleContainer>
                 <LinkContainer>
                   <Link href={project.github}>
-                    <LinkImg src={GithubIcon} alt="Email icon" />
+                    <LinkImg src={GithubIcon} alt="Github Link" />
                   </Link>
                   <Link href={project.url}>
-                    <LinkImg src={GithubIcon} alt="Email icon" />
+                    <LinkImg src={getBrowserIcon()} alt="Site link" />
                   </Link>
                 </LinkContainer>
               </TopContainer>

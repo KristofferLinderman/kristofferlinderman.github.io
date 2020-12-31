@@ -3,9 +3,9 @@ import ContactText from '../../content/ContactContent';
 import ContactImg from '../../assets/images/contact.jpg';
 import ImageWithOverlay from '../../commonComponents/ImageWithOverlay';
 import {
-  Container, LinkContainer, Link, LinkImg,
+  Container, LinkContainer,
 } from './Contact.style';
-import { Text } from '../../commonComponents/common.style';
+import { Link, LinkImg, Text } from '../../commonComponents/common.style';
 import EmailIcon from '../../assets/icons/email.svg';
 import GithubIcon from '../../assets/icons/github.svg';
 import LinkedinIcon from '../../assets/icons/linkedin.svg';

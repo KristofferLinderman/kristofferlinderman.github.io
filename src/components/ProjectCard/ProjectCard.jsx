@@ -4,10 +4,13 @@ import {
   Card, Image, InfoContainer,
 } from './ProjectCard.style';
 import { ProjectTag, ProjectTitle } from '../../commonComponents/common.style';
+// import { THEME } from '../../commonComponents/constants';
 
 const ProjectCard = ({ projectData, handleOnClick }) => (
-  <Card onClick={() => handleOnClick(projectData)}>
-    <Image src={projectData.img} />
+  <Card
+    onClick={() => handleOnClick(projectData)}
+  >
+    <Image src={projectData.img} whileHover={{ scale: 1.1 }} />
     <InfoContainer>
       <ProjectTitle>
         {projectData.name}

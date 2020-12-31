@@ -1,7 +1,9 @@
 const FONT_SIZE = {
   TEXT: '1rem',
+  TEXT_LARGE: '1.25rem',
   TITLE: '1.5rem',
   PROJECT_TITLE: '1.25rem',
+  PROJECT_TITLE_LARGE: '2rem',
 };
 
 const SIZE = {

@@ -31,6 +31,10 @@ const Container = styled.div`
   display: flex;    
   flex-direction: column;
   height: 100%;
+
+  @media ${DEVICE.LAPTOP}{
+    padding: ${SIZE.LARGE};
+  }
 `;
 
 const TopContainer = styled.div`
@@ -63,14 +67,6 @@ const LinkContainer = styled.div`
   }
 `;
 
-const Link = styled.a`
-  display: flex;
-`;
-
-const LinkImg = styled.img`
-  width: ${SIZE.XLARGE};
-`;
-
 export {
   Modal,
   Overlay,
@@ -79,6 +75,4 @@ export {
   BottomContainer,
   TitleContainer,
   LinkContainer,
-  Link,
-  LinkImg,
 };

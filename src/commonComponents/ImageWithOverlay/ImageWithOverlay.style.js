@@ -20,6 +20,8 @@ const SideContainer = styled(Container)`
 const OverlayContainer = styled.div`
   margin:auto;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   background-color: ${THEME.PRIMARY_LIGHT};
   border-radius: ${THEME.BORDER_RADIUS} ${THEME.BORDER_RADIUS} 0 0;
@@ -28,6 +30,12 @@ const OverlayContainer = styled.div`
   padding: ${SIZE.SMALL} ${SIZE.MEDIUM};
   height: 40%;
   overflow: scroll;
+  box-sizing: border-box;
+
+  @media ${DEVICE.TABLET}{
+    height: fit-content;
+    width: 100%;
+  }
 `;
 
 const SideOverlayContainer = styled(OverlayContainer)`
@@ -36,14 +44,24 @@ const SideOverlayContainer = styled(OverlayContainer)`
     border-radius: 20px;
     position: relative;
     height: fit-content;
-    left: -10%;
+    left: ${(p) => (p.leftSide ? '10%' : 'auto')};
+    right: ${(p) => (p.rightSide ? '10%' : 'auto')};
   }
 `;
 
 const Image = styled.img`
   width: ${(p) => (p.fitToHeight ? 'auto' : '100%')};
   height: ${(p) => (p.fitToHeight ? '60%' : 'auto')};
-  object-fit: ${(p) => (p.fitToHeight ? 'cover' : 'initial')};
+  object-fit: cover;
+  
+  @media ${DEVICE.TABLET}{
+    
+  }
+
+  @media ${DEVICE.LAPTOP}{
+    width: auto;
+    height: 100%;
+  }
 `;
 
 export {

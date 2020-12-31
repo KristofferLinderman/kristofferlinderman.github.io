@@ -9,8 +9,6 @@ const ScrollToTop = ({ topRef }) => {
   const lastPosition = useRef(null);
 
   const handleScroll = ({ currPos, direction }) => {
-    // console.log(` ${prevPos.y}  ${currPos.y} direction: ${direction > 0 ? 'UP' : 'DOWN'}`);
-
     const showScrollBtnWithTimout = () => {
       setShowScrollBtn(true);
       setTimeout(() => {

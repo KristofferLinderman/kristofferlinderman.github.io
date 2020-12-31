@@ -14,7 +14,7 @@ const ImageWithOverlay = ({
       return (
         <SideContainer leftSide={leftSide} rightSide={rightSide}>
           <Image src={image} alt="" srcSet="" fitToHeight={fitToHeight} />
-          <SideOverlayContainer>
+          <SideOverlayContainer leftSide={leftSide} rightSide={rightSide}>
             {children}
           </SideOverlayContainer>
         </SideContainer>

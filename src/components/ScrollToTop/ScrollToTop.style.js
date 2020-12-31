@@ -16,6 +16,7 @@ const Container = styled.div`
   opacity: ${(props) => (props.showScrollBtn ? 1 : 0)};
   visibility: ${(props) => (props.showScrollBtn ? 'visible' : 'hidden')};
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 `;
 
 const ImageIcon = styled(UpIcon)`
@@ -27,7 +28,7 @@ const ImageIcon = styled(UpIcon)`
 const UndoScrollBtn = styled.button`
   position: fixed;
   height: 2.5rem;
-  width: 65%;
+  padding: 0 ${SIZE.LARGE};
   border: none;
   border-radius: 50px;
   font-size: 1rem;
@@ -41,6 +42,7 @@ const UndoScrollBtn = styled.button`
   opacity: ${(props) => (props.showUndoBtn ? 1 : 0)};
   visibility: ${(props) => (props.showUndoBtn ? 'visible' : 'hidden')};
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 
   > span {
     background: ${THEME.GRADIENT_TEXT};
