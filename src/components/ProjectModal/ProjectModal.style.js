@@ -47,6 +47,10 @@ const BottomContainer = styled.div`
   max-height: ${SIZE.LINE_HEIGHT * 6}rem;
   margin: auto;
   overflow: scroll;
+  
+  @media ${DEVICE.TABLET}{
+    overflow: hidden;
+  }
 `;
 
 const TitleContainer = styled.div`

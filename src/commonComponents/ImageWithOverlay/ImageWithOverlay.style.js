@@ -34,7 +34,12 @@ const OverlayContainer = styled.div`
 
   @media ${DEVICE.TABLET}{
     height: fit-content;
+    overflow: hidden;
     width: 100%;
+
+    & > div {
+      overflow: hidden;
+    }
   }
 `;
 
@@ -43,7 +48,6 @@ const SideOverlayContainer = styled(OverlayContainer)`
     min-width: 40%;
     border-radius: 20px;
     position: relative;
-    height: fit-content;
     left: ${(p) => (p.leftSide ? '10%' : 'auto')};
     right: ${(p) => (p.rightSide ? '10%' : 'auto')};
   }
