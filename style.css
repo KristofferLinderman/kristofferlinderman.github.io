@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    font-size: 18px;
+    background-color: #f0f0f0; /* Light Gray */
+    display: grid;
+    align-content: center;
+    height: 100vh; /* 100% of the viewport height */
+    gap: 2rem;
+    padding: 0 10px;
+}
+
+h1,h2,h3 {
+    margin: 0; 
+}
+
+.header {
+    text-align: center;
+    font-size: 18px;
+    color: #C30F16; /* Gold */
+}
+
+.card {
+    text-align: center;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question-text {
+    color: #228B22; /* Forest Green */
+    font-size: 18px;
+}
+
+.input-container{
+    display: flex;
+    gap: 1rem;
+}
+
+#answer-input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #228B22;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+button {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #228B22;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #2E8B57; /* Sea Green */
+}
+
+#result-container {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #FF0000; /* Red */
+}
+
+#letter-container {
+    min-height: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    color: #228B22; /* Forest Green */
+}
+
+/* Add some snowflakes for decoration */
+.header::before, .header::after {
+    content: '❄ ❄ ❄ ❄ ❄ ❄';
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #87CEEB; /* Sky Blue */
+}
