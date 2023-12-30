@@ -1,32 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Riddle App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header card">
-        <h1>Lappgömma</h1>
-        <h2>🍐-edition</h2>
+      <h1>Lappgömma</h1>
+      <h2>🍐-edition</h2>
     </div>
     <div class="card">
-        <div id="question-container">
-            <h2 id="question-title">Lapp #1</h2>
+      <div id="question-container">
+        <h2 id="question-title">Lapp #1</h2>
 
-            <p id="question-text">Med tre småttingar får jag reda på allt<br> varesig solsken, varmt eller kallt <br><br> För nästa lapp ni hittar vid mig <br> men kolla då bakom, ej min display </p>
+        <p id="question-text"></p>
 
-            <div class="input-container">
-                <input type="text" id="answer-input" placeholder="✏️ Skriv talet här">
-                <button onclick="checkAnswer()">SEND</button>
-            </div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="answer-input"
+            placeholder="✏️ Skriv talet här"
+          />
+          <button onclick="checkAnswer()">SEND</button>
         </div>
-        <div id="result-container"></div>
+      </div>
+      <div id="result-container"></div>
     </div>
     <div class="card">
-        <div id="letter-container"></div>
+      <div id="letter-container"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
